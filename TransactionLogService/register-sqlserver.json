@@ -1,0 +1,17 @@
+{
+  "name": "OutboxExample-Connector",
+  "config": {
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "tasks.max": "1",
+    "database.hostname": "host.docker.internal",
+    "database.port": "1433",
+    "database.user": "SA",
+    "database.password": "1q2w3e4r+!",
+    "database.dbname": "OutboxExampleDB",
+    "database.server.name": "MSSQLServer",
+    "schema.include.list": "dbo",
+    "table.whitelist": "dbo.OrderOutboxes",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "dbhistory.outboxtable"
+  }
+}

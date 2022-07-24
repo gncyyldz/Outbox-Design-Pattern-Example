@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\OutboxExample.Application\OutboxExample.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\OutboxExample.Persistence\OutboxExample.Persistence.csproj" />
+    <ProjectReference Include="..\..\OutboxExample.Shared\OutboxExample.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

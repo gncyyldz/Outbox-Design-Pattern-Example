@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-OutboxExample.ProcessOutboxJob.Service-1314D49C-303D-40C6-8DC9-F0A457E742E4</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Quartz" Version="3.4.0" />
+    <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.4.0" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\OutboxExample.Domain\OutboxExample.Domain.csproj" />
+    <ProjectReference Include="..\..\OutboxExample.Shared\OutboxExample.Shared.csproj" />
+  </ItemGroup>
+</Project>
